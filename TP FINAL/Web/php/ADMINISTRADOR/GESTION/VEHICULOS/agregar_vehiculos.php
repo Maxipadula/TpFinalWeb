@@ -4,7 +4,12 @@
 <body>
 	<?php include("vehiculos_datos.php"); ?>
 	<?PHP
-			session_start();
+			
+    if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    } 
+
 			
 			
 	
@@ -58,13 +63,6 @@
 				<br>
  		</div>
  	</form>
- 	
-<<<<<<< HEAD
-	
  	</div>
  </body>
-=======
-
- 
->>>>>>> origin/master
- </html>
+</html>

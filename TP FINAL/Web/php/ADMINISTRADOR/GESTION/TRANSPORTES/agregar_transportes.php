@@ -4,8 +4,13 @@
 </head>
 <body>
 <?php include ("transportes_datos.php"); ?>
-	<?PHP		
-			session_start();	
+	<?php		
+			
+    if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    } 
+
 			include ('../../../rutas.php');
 	
 	$conexion = mysql_connect($puerto, $usuario,$password) or die("no conecta");

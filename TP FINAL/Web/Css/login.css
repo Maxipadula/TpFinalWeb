@@ -141,3 +141,19 @@ a:hover
   color: #FFFFFF;
 }
 
+input[readonly] {
+color: #9E9E9E; 
+}
+
+input[type="text"] {
+  padding: 5px;
+  border: none;
+  border-bottom: solid 2px #c9c9c9;
+  transition: border 0.3s;
+  font-family: 'Ubuntu', sans-serif;
+  text-align: center;
+}
+input[type="text"]:focus,
+input[type="text"].focus {
+  border-bottom: solid 2px #969696;
+}

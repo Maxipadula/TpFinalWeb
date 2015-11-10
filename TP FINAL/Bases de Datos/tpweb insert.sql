@@ -108,8 +108,8 @@ values	(10, 'pato','Patricio Lombardia','1234asd','1965-10-23', 1, '302584789', 
 								  tipo_doc TD on U.id_tipo_doc = TD.id_tipo_doc
 								  WHERE TD.id_tipo_doc = 1 AND  num_doc=302584789;   */
 
-select *
-from usuario;
+/*select *
+from usuario; */
 
 insert into modelo (id_modelo, descripcion)
 values	(100, 'HD 78'),
@@ -169,8 +169,8 @@ values	(1111, 'b', 123, 236589, 147852, 2005,'fkn 106',1000000),
 											   marca M on V.id_marca = M.id_marca inner join 
 											   modelo MO on V.id_modelo = MO.id_modelo;*/      
         
-select *
-from transporte;
+/*select *
+from transporte;*/
 
 insert into acoplado (id_acoplado, descripcion)
 values	(0, 'sin acoplado'),
@@ -193,8 +193,8 @@ values	(1122, 10,101, 2222, 'Buenos Aires', 10000, 'Florianopolis', 'Pedromania'
 		(5566, 30,0, 3333, 'Misiones', 4000, 'Montevideo','sisis', '2015-12-12 12:30:34', '2015-12-12 16:30:00','medias'),
 		(6677, 50,601, 4444, 'Mendoza',  8500, 'Asuncion','nadanada', '2015-07-06 12:00:20', '2015-07-06 20:40:29','buzos');
 
-select *
-from viaje;
+/*select *
+from viaje; */
 
 insert into vale_combustible(id_vc,id_viaje,  fecha_hora, lugar, costo, cantidad)
 values (1,1122,'2015-06-05 15:11:25', 'Entre Rios', 5000.00, 250.00),   
@@ -223,7 +223,7 @@ values(1,'motor',15000),
 /*select * 
 from repuesto;*/      
 
-insert into alarmas (id_alarmas, id_repuesto, kilometros)
+/*insert into alarmas (id_alarmas, id_repuesto, kilometros)
 values(990,1,200000), 
 	  (991,2,100000), 
 	  (992,3,15000), 
@@ -231,7 +231,7 @@ values(990,1,200000),
       (994,5,10000), 
       (995,6,30000), 
       (996,7,9000), 
-      (997,8,6300); 
+      (997,8,6300); */
       
 insert into orden (id_orden,id_repuesto,cantidad)
 values	(1,1,1),
@@ -255,8 +255,8 @@ values	(001, 'Yanet Rodriguez'),
 		(005, 'Ivan Lomba'),
 		(006, 'Lucrecio Lunch');
         
-select * 
-from mecanico;     
+/*select * 
+from mecanico;     */
         
 insert into reparacion (codigo_reparacion, id_mecanico, id_transporte,id_orden, costo, fecha)
 values	(123, 006, 5555,1, 15000, '2015-08-06'),

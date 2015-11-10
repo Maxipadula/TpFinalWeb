@@ -1,7 +1,10 @@
 <html>
 <?php include ("transportes_datos.php"); ?>
 	<?php
-		session_start();
+		if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    } 
 		
 		include ("../../../rutas.php");
 		
