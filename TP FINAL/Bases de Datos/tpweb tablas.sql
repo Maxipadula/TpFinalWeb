@@ -138,7 +138,8 @@ create table if not exists acoplado
 /*VIAJE*/
 create table if not exists viaje 
 	(id_viaje int unique,
-     id_usuario int, 
+     id_usuario int,
+     id_acoplado int,
      id_transporte int,
      origen varchar (30),
      km_recorridos int,
@@ -153,8 +154,13 @@ create table if not exists viaje
 	 ON UPDATE CASCADE,
      constraint id_transporte_fk foreign key (id_transporte) references transporte (id_transporte)
 	 ON DELETE CASCADE
+	 ON UPDATE CASCADE,
+	constraint id_acoplado_fk foreign key (id_acoplado) references acoplado (id_acoplado)
+	 ON DELETE CASCADE
 	 ON UPDATE CASCADE
+
 );
+
 
 create table if not exists vale_combustible
 	(id_vc int primary key,
@@ -168,21 +174,7 @@ create table if not exists vale_combustible
 	 ON UPDATE CASCADE
 );
 
-create table if not exists lleva
-(id_acoplado int,
- id_transporte int,
- id_viaje int,
- constraint lleva_pk primary key (id_viaje,id_transporte,id_acoplado),
- constraint id_viaje_lleva foreign key (id_viaje) references viaje (id_viaje)
- ON DELETE CASCADE
- ON UPDATE CASCADE,
- constraint id_acoplado_lleva foreign key (id_acoplado) references acoplado (id_acoplado)
- ON DELETE CASCADE
- ON UPDATE CASCADE,
- constraint id_transporte_lleva foreign key (id_transporte) references transporte (id_transporte)
- ON DELETE CASCADE
- ON UPDATE CASCADE
- );
+
 
 /**********************/
 

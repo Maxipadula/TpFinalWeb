@@ -182,14 +182,14 @@ values	(101, 'acoplado1'),
 /*select *
 from acoplado;*/    
 
-insert into viaje (id_viaje, id_usuario, id_transporte, origen, km_recorridos,
+insert into viaje (id_viaje, id_usuario,id_acoplado, id_transporte, origen, km_recorridos,
 				 destino, cliente, fecha_inicio, fecha_fin, carga)
-values	(1122, 10, 2222, 'Buenos Aires', 10000, 'Florianopolis', 'Pedromania', '2015-06-05 07:20:21', '2015-06-06 09:36:55', 'pantalones'),
-		(2233, 20, 6666, 'Salta',8900, 'Buenos aires','Ropamania', '2015-08-09 07:00:20','2015-08-09 04:00:20', 'poleras'),
-		(3344, 60, 5555, 'Rio Negro',  4000, 'Chile','TodoRopa', '2015-10-11 05:00:00', '2015-11-11 01:18:05', 'pantalones'),
-		(4455, 40, 1111, 'Cordoba',  9000, 'Bolivia','Todopordospesos', '2015-08-01 05:25:54','2015-08-01 18:25:55','remeras'),
-		(5566, 30, 3333, 'Misiones', 4000, 'Montevideo','sisis', '2015-12-12 12:30:34', '2015-12-12 16:30:00','medias'),
-		(6677, 50, 4444, 'Mendoza',  8500, 'Asuncion','nadanada', '2015-07-06 12:00:20', '2015-07-06 20:40:29','buzos');
+values	(1122, 10,101, 2222, 'Buenos Aires', 10000, 'Florianopolis', 'Pedromania', '2015-06-05 07:20:21', '2015-06-06 09:36:55', 'pantalones'),
+		(2233, 20, 6666,' ', 'Salta',8900, 'Buenos aires','Ropamania', '2015-08-09 07:00:20','2015-08-09 04:00:20', 'poleras'),
+		(3344, 60,101, 5555, 'Rio Negro',  4000, 'Chile','TodoRopa', '2015-10-11 05:00:00', '2015-11-11 01:18:05', 'pantalones'),
+		(4455, 40,401, 1111, 'Cordoba',  9000, 'Bolivia','Todopordospesos', '2015-08-01 05:25:54','2015-08-01 18:25:55','remeras'),
+		(5566, 30,'', 3333, 'Misiones', 4000, 'Montevideo','sisis', '2015-12-12 12:30:34', '2015-12-12 16:30:00','medias'),
+		(6677, 50,601, 4444, 'Mendoza',  8500, 'Asuncion','nadanada', '2015-07-06 12:00:20', '2015-07-06 20:40:29','buzos');
 
 select *
 from viaje;
@@ -203,11 +203,7 @@ values (1,1122,'2015-06-05 15:11:25', 'Entre Rios', 5000.00, 250.00),
 /*select *
 from vale_combustible;*/
  
-insert into lleva(id_acoplado,id_transporte,id_viaje)
-values(101,2222,1122),   
-	  (101,5555,3344),  
-      (401,1111,4455),  
-      (601,4444,6677);  
+ 
 
 /*select *
 from viaje;*/
