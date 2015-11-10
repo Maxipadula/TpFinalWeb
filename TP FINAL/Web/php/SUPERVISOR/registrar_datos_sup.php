@@ -1,39 +1,21 @@
 <html>
 	<head>
-		<?PHP
-			$motor = 150;
-			$llanta = 60000;
-			$rueda = 30000;
-			$tapa_cilindro = 190000;
-			$amortiguadores = 10000;
-			$volante = 250000;
-			$paragolpes = 100500;
-			$guardabarros = 220000;
-			
-			$motor_n = "Motor";
-			$llanta_n = "Llantas";
-			$rueda_n = "Ruedas";
-			$tapa_cilindro_n = "Tapa de Cilindro";
-			$amortiguadores_n = "Amortiguadores";
-			$volante_n = "Volante";
-			$paragolpes_n = "Paragolpes";
-			$guardabarros_n = "Guardabarros";
-			
+		<?PHP		
 			include ('../rutas.php');
 			
 			$conexion = mysql_connect($puerto, $usuario,$password) or die("no conecta");
 				mysql_select_db ("tpFinal",$conexion) or die ("no db");
 			
-			control ($motor,$motor_n);
-			control($llanta,$llanta_n);
-			control ($rueda,$rueda_n);
-			control($tapa_cilindro,$tapa_cilindro_n);
-			control ($amortiguadores,$amortiguadores_n);
-			control($volante,$volante_n);
-			control ($paragolpes,$paragolpes_n);
-			control($guardabarros,$guardabarros_n);
+			$alarma = mysql_query (" select ")
 			
-			function control ($x,$b){
+			
+			
+			
+			
+			
+			
+			
+			/*function control ($x,$b){
 			
 				$control= mysql_query(" SELECT id_transporte trans
 										FROM transporte
@@ -47,6 +29,7 @@
 	
                              
 			}
+			*/
 		
 		
 		?>

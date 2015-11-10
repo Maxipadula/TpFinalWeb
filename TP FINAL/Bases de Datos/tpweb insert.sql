@@ -92,7 +92,7 @@ insert into dar_permiso(id_permiso,codigo_rol)
 
 /*select * 
 from permiso;*/
-          
+
 insert into usuario (id_usuario, usuario, nombre, pass, fecha_nacimiento, id_tipo_doc, num_doc, id_licencia, codigo_rol)
 values	(10, 'pato','Patricio Lombardia','1234asd','1965-10-23', 1, '302584789', 'NO',3),
 		(20, 'santi','Santiago Ares','123kjl','1984-04-23', 1, '32147563','B.1',2),
@@ -102,6 +102,7 @@ values	(10, 'pato','Patricio Lombardia','1234asd','1965-10-23', 1, '302584789', 
 		(60, 'leo','Leonel Rodriguez','123123nhu','1985-11-07', 1, '34563218','C',3);
         
 
+
 /*delete from usuario where id_usuario = 10;*/
         
 /*SELECT * 
@@ -109,6 +110,8 @@ values	(10, 'pato','Patricio Lombardia','1234asd','1965-10-23', 1, '302584789', 
 								  tipo_doc TD on U.id_tipo_doc = TD.id_tipo_doc
 								  WHERE TD.id_tipo_doc = 1 AND  num_doc=302584789;   */
 
+select *
+from usuario;
 
 insert into modelo (id_modelo, descripcion)
 values	(100, 'HD 78'),
@@ -145,15 +148,15 @@ values  (123, 100, 1,5225.00),
 
 
 
-insert into transporte (id_transporte, id_estado, id_vehiculo, num_chasis, num_motor, anio_fabricacion,patente)
-values	(1111, 'b', 123, 236589, 147852, 2005,'fkn 106'),
-        (2222, 'mb', 123, 963258, 852147, 2013,'fmj 750'),
-        (3333, 'mb', 123, 789456, 321987, 2014,'hgp 650'),
-        (4444, 'r', 456, 159753, 258456, 2007,'dlo 890'),
-        (5555, 'b', 456, 951357, 448866, 2011,'dgf 789'),
-		(6666, 'm', 789, 358692, 69852, 2015,'fen 404'),
-        (7777, 'mb',147, 134679, 976431, 2013,'oki 435'),
-        (8888, 'r',789, 1357913, 791357, 2014,'dma 124');
+insert into transporte (id_transporte, id_estado, id_vehiculo, num_chasis, num_motor, anio_fabricacion,patente,km_recorridos)
+values	(1111, 'b', 123, 236589, 147852, 2005,'fkn 106',1000000),
+        (2222, 'mb', 123, 963258, 852147, 2013,'fmj 750',20000),
+        (3333, 'mb', 123, 789456, 321987, 2014,'hgp 650',5000),
+        (4444, 'r', 456, 159753, 258456, 2007,'dlo 890',800),
+        (5555, 'b', 456, 951357, 448866, 2011,'dgf 789',600),
+		(6666, 'm', 789, 358692, 69852, 2015,'fen 404',9500),
+        (7777, 'mb',147, 134679, 976431, 2013,'oki 435',250000),
+        (8888, 'r',789, 1357913, 791357, 2014,'dma 124',150000);
         
 /*SELECT MA.descripcion marca,MO.descripcion modelo, T.patente
 											  FROM transporte T join
@@ -168,8 +171,8 @@ values	(1111, 'b', 123, 236589, 147852, 2005,'fkn 106'),
 											   marca M on V.id_marca = M.id_marca inner join 
 											   modelo MO on V.id_modelo = MO.id_modelo;*/      
         
-/*select *
-from transporte;*/
+select *
+from transporte;
 
 insert into acoplado (id_acoplado, descripcion)
 values	(101, 'acoplado1'),
@@ -221,6 +224,16 @@ values(1,'motor',15000),
 /*select * 
 from repuesto;*/      
 
+insert into alarmas (id_alarmas, id_repuesto, kilometros)
+values(990,1,200000), 
+	  (991,2,100000), 
+	  (992,3,15000), 
+	  (993,4,20000), 
+      (994,5,10000), 
+      (995,6,30000), 
+      (996,7,9000), 
+      (997,8,6300); 
+      
 insert into orden (id_orden,id_repuesto,cantidad)
 values	(1,1,1),
 		(2,2,2),
