@@ -1,0 +1,111 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:300);
+
+html{
+  margin:0;
+  padding:0;
+}
+body {
+	background-color: #FFFFFF;
+  margin: 0;
+	font-family: 'Ubuntu', sans-serif;
+  padding: 0;
+	}
+
+ul{
+  float: left;
+  list-style-type: none;
+  padding: 0;
+	margin: 0;
+  position: relative;
+  left:50%;
+}	
+
+ul li {
+  float: left;
+  position: relative;
+  right: 50%;
+}
+li a{
+  padding: 30px;
+}
+
+#login{
+	text-align: center;
+}
+
+#divHeader{
+	height: 100px;
+	background-color: #00BCD4;
+	text-align: center;
+	padding-top: 25px;
+	color: #FFFFFF;
+}
+
+#divNav{
+	text-align: left;
+	background-color: #0097A7;
+	color:#FFFFFF;
+  margin:0 auto;
+  overflow: hidden;
+ }
+
+#divContenedor{
+	margin-left: 200px;
+	margin-right: 200px;
+  text-align: center;
+}
+
+
+/* Color Hipervinculos*/
+a{
+	color:#FFFFFF;
+}
+a:link
+{
+   text-decoration: none;
+}
+a:visited
+{
+   text-decoration: none;
+}
+a:hover
+{
+   text-decoration: underline;
+}
+
+/*   Boton    */
+
+.boton{
+        color:white;
+        background:#0097A7;
+        border:0px;
+        width:100px;
+        height:30px;
+        font-family: 'Ubuntu', sans-serif;
+       }
+
+/* ERRORES JS*/
+
+.errores{
+    text-align: center;
+    width:200px;
+    height: 20px;
+    color: #F44336;
+    display: none;
+    margin: 0 auto;
+    font-size: 12px;
+}
+
+#bienvenido{
+  float:right;
+  margin-right: 10px;
+}
+
+#divHeaderLogin{
+  height: 100px;
+  background-color: #009688;
+  text-align: center;
+  padding-top: 45px;
+  color: #FFFFFF;
+}
+
