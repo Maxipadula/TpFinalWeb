@@ -96,6 +96,9 @@ a:link
 {
    text-decoration: none;
 }
+.tabla{
+	color: blue;
+}
 a:visited
 {
    text-decoration: none;

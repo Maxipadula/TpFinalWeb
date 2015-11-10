@@ -1,9 +1,14 @@
-	MODIFICAR USUARIO PARTE 3
-	<?php 
-	 <?php include ("usuarios_datos.php"); ?>
-	session_start();
+
 	
-	$modificar = $_SESSION ["usuario_a_modificar"];
+	 <?php include ("usuarios_datos.php"); ?>
+	<?php 
+	
+	if(!isset($_SESSION)){
+		session_start();
+	}
+	$modificar = $_POST["id_usuario"];
+	
+	$_SESSION["usuario_a_modificar"] = $modificar;
 	
 
  		
@@ -13,7 +18,7 @@
 	mysql_select_db ("tpFinal",$conexion) or die ("no db");
 			
 		
-		echo "<form class='chequeado' method='post' action='$ingresar_modificaciones_usuario.php'>";
+		echo "<form class='chequeado' method='post' action=". $ingresar_modificaciones_usuario.">";
 		
 		ifs('usuario');
 		ifs('nombre');

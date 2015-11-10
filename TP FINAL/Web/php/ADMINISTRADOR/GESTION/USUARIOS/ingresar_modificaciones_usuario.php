@@ -1,7 +1,7 @@
 <?PHP
-	session_start() ;
+
 	
-	$usuario = $_POST["usuario"];
+ include ("usuarios_datos.php");
 	$id_usuario = $_SESSION["usuario_a_modificar"];
 	
 	
@@ -13,35 +13,35 @@
 	if (isset ($usuario)){
 		$update_usuario = mysql_query("UPDATE usuario
 									   SET usuario ='".$usuario."'
-									   WHERE id_usuario = '".$id_usuario."'") or die ("1");
+									   WHERE id_usuario = '".$id_usuario."'") or die (mysql_error());
 		
 	}
 	
 	if (isset ($_POST["nombre"])){
 		$update_usuario = mysql_query("UPDATE usuario
 									   SET nombre ='".$_POST["nombre"]."'
-									   WHERE id_usuario = '".$id_usuario."'")or die ("2");
+									   WHERE id_usuario = '".$id_usuario."'")or die (mysql_error());
 		
 	}
     
 	if (isset ($_POST["password"])){
 		$update_usuario = mysql_query("UPDATE usuario
 									   SET pass ='".$_POST["password"]."'
-									   WHERE id_usuario = '".$id_usuario."'")or die ("3");
+									   WHERE id_usuario = '".$id_usuario."'")or die (mysql_error());
 		
 	}
 	
 	if (isset ($_POST["fecha"])){
 		$update_usuario = mysql_query("UPDATE usuario
 									   SET fecha_nacimiiento ='".$_POST["fecha"]."'
-									   WHERE id_usuario = '".$id_usuario."'")or die ("4");
+									   WHERE id_usuario = '".$id_usuario."'")or die (mysql_error());
 		
 	}
 	
 	if (isset ($_POST["licencia"])){
 		$update_usuario = mysql_query("UPDATE usuario
 									   SET id_licencia ='".$_POST["licencia"]."'
-									   WHERE id_usuario = '".$id_usuario."'")or die ("5");
+									   WHERE id_usuario = '".$id_usuario."'")or die (mysql_error());
 		
 	}
 	
@@ -49,7 +49,7 @@
 		
 		$consulta = mysql_query("SELECT codigo_rol
 								 FROM rol
-								 WHERE descripcion = '".$_POST["rol"]."'")or die ("1");
+								 WHERE descripcion = '".$_POST["rol"]."'")or die (mysql_error());
 								 
 		$id_rol= mysql_fetch_assoc($consulta);
 		
@@ -59,5 +59,5 @@
 		
 	}
 	
-	header("location:".$usuarios_datos."");
+	echo("MODIFICACION EXITOSA");
 ?>
