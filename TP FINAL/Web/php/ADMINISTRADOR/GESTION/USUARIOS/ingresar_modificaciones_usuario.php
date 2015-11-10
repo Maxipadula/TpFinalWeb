@@ -12,7 +12,7 @@
 		
 	if (isset ($usuario)){
 		$update_usuario = mysql_query("UPDATE usuario
-									   SET usuario ='".$usuario."'
+									   SET usuario ='".$_POST["usuario"]."'
 									   WHERE id_usuario = '".$id_usuario."'") or die (mysql_error());
 		
 	}

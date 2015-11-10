@@ -9,7 +9,7 @@
 	<div id="divContenedor">
 		</br>
 		<p>SELECCIONAR USUARIO A MODIFICAR</p>
-		<p>Colocar tipo y numero de documento del usuario a modificar: </p>
+
 		<form class='contacto' method="post" action="<?php echo $usuario_a_modificar ?>">
 			<div id="contacto">
 		

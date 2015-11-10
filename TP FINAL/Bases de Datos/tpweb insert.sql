@@ -103,10 +103,9 @@ values	(10, 'pato','Patricio Lombardia','1234asd','1965-10-23', 1, '302584789', 
 
 /*delete from usuario where id_usuario = 10;*/
         
-/*SELECT * 
-					FROM usuario U inner join
-								  tipo_doc TD on U.id_tipo_doc = TD.id_tipo_doc
-								  WHERE TD.id_tipo_doc = 1 AND  num_doc=302584789;   */
+/*SELECT U.nombre nombre,U.usuario usuario,U.pass contra,U.fecha_nacimiento fecha,U.num_doc numdoc,R.descripcion rol
+									   FROM usuario U join
+											rol R on R.codigo_rol = U.codigo_rol */
 
 /*select *
 from usuario; */
@@ -170,7 +169,7 @@ values	(1111, 'b', 123, 236589, 147852, 2005,'fkn 106',1000000),
 											   modelo MO on V.id_modelo = MO.id_modelo;*/      
         
 /*select *
-from transporte;*/
+from usuario;*/
 
 insert into acoplado (id_acoplado, descripcion)
 values	(0, 'sin acoplado'),
