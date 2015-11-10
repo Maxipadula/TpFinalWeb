@@ -35,23 +35,31 @@
 		?>
 	
 
+		   
+
+		<LINK REL="Stylesheet" HREF="../../Css/login.css" TYPE="text/css">
 	</head>
 	
 	<body>
-	
-			<h2> RECURSOS A GESTIONAR </h2>
-			
-		  
-           <a href="./<?php echo $viajes_datos ?>">VIAJES</a>
+		<div id='divHeader_supervisor'>
+			<h1> RECURSOS A GESTIONAR</h1>
+		</div>
 
-           <a href="./<?php echo $reparacion_datos?>">REPARACIONES</a>
-
-		  <br>
-		  <br>
-		   <br>
-           <a href="./<?php echo $supervisor_home?>">ATRAS</a>
-		   
+			<nav id='divNav_supervisor'>
 		
+				<ul>
+       			    <li> <a href="./<?php echo $viajes_datos ?>">VIAJES</a></li>
+            		<li><a href="./<?php echo $reparacion_datos?>">REPARACIONES</a></li>
+					<li> <a href="./<?php echo $supervisor_home?>">ATRAS</a></li>
+				</ul>
+			</nav>
+
+		<div id="divContenedor">
+
+
+		</div>
+
+
        
 		
 		

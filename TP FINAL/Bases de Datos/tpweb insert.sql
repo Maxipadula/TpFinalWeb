@@ -13,7 +13,7 @@ values (1, 'DNI'),
        (7, 'Libreta Civica');
 
  /*select *
-from tipo_doc;*/  
+from rol;*/  
 
        
 insert into licencia (id_licencia, descripcion)

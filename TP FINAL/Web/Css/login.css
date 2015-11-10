@@ -48,6 +48,38 @@ li a{
   margin:0 auto;
   overflow: hidden;
  }
+ 
+  #divHeader_supervisor{
+	height: 100px;
+	background-color: #0DDC22;
+	text-align: center;
+	padding-top: 25px;
+	color: #FFFFFF;
+}
+
+ #divNav_supervisor{
+	text-align: left;
+	background-color: #09B71B;
+	color:#FFFFFF;
+  margin:0 auto;
+  overflow: hidden;
+ }
+ 
+ #divHeader_chofer{
+	height: 100px;
+	background-color: #FF9C06;
+	text-align: center;
+	padding-top: 25px;
+	color: #FFFFFF;
+}
+
+ #divNav_chofer{
+	text-align: left;
+	background-color: #E78B00;
+	color:#FFFFFF;
+  margin:0 auto;
+  overflow: hidden;
+ }
 
 #divContenedor{
 	margin-left: 200px;

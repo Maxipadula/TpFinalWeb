@@ -27,19 +27,20 @@
 
 <html>
 	<head>
-		<LINK REL="Stylesheet" HREF="../css/login.css" TYPE="text/css">
+		<LINK REL="Stylesheet" HREF="../../Css/login.css" TYPE="text/css">
 	</head>
 	
 	<body>
-		<div id='divHeader'>
+		<div id='divHeader_supervisor'>
 			<h1> Sistema de Gestión Logistica</h1>
 		</div>
 
-			<nav id='divNav'>
+			<nav id='divNav_supervisor'>
 		
-
-       			    <a href="./<?php echo $registrar_datos_sup ?>"> REGISTROS &nbsp;&nbsp;</a>
-            		<a href="./<?php echo $login?>"> SALIR &nbsp;&nbsp;</a>
+				<ul>
+       			    <li><a href="./<?php echo $registrar_datos_sup ?>"> REGISTROS &nbsp;&nbsp;</a></li>
+            		<li><a href="./<?php echo $login?>"> SALIR &nbsp;&nbsp;</a></li>
+				</ul>
 			</nav>
 
 		<div id="divContenedor">

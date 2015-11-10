@@ -1,7 +1,10 @@
 <html>
+	<head>
+		<LINK REL="Stylesheet" HREF="../../Css/login.css" TYPE="text/css">
+	</head>
 	<body>
 
-			<h2> MODIFICAR COSAS DE LA REPARACION </h2>
+		
 			
 			<?php 
 				session_start();
@@ -17,12 +20,25 @@
 		 
 		    ?>
 			
-           <a href="./<?php echo $agregar_reparacion?>">AGREGAR</a>
-		   <br>
-		   <a href="./<?php echo $modificar_reparacion?>">MODIFICAR</a>
-		   <br>
-		   <a href="./<?php echo $eliminar_reparacion?>">ELIMINAR</a>
-		   <br>
+        
+		   	<div id='divHeader_supervisor'>
+			<h1> REPARACIONES</h1>
+		</div>
+
+			<nav id='divNav_supervisor'>
+		
+				<ul>
+       			    <li> <a  href="./<?php echo $agregar_reparacion?>">AGREGAR</a></li>
+            		<li><a  href="./<?php echo $modificar_reparacion?>">MODIFICAR</a></li>
+					<li><a href="./<?php echo $eliminar_reparacion?>">ELIMINAR</a></li>
+					<li> <a href="./<?php echo $supervisor_home?>">ATRAS</a></li>
+				</ul>
+			</nav>
+
+		<div id="divContenedor">
+
+
+		</div>
 		   
 	</body>
 

@@ -6,10 +6,10 @@
 	
 <body>
 <?php include ("../rutas.php"); ?>
-<div id='divHeader'>
+<div id='divHeader_chofer'>
 			<h1> Sistema de Gestión Logistica</h1>
 		</div>
-	<nav id='divNav' >
+	<nav id='divNav_chofer' >
 		
        <ul>
            <li><a href="./<?php echo $registrar_vc?>">REGISTRAR VALE DE COMBUSTIBLE</a></li>

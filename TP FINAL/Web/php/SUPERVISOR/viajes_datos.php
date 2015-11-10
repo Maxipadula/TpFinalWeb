@@ -1,4 +1,8 @@
 <html>
+	<head>
+		<LINK REL="Stylesheet" HREF="../../Css/login.css" TYPE="text/css">
+	</head>
+	
 	<body>
 	
 	<?php 	
@@ -18,15 +22,26 @@
 	
 
 
-			<h2> MODIFICAR REGISTROS DE VIAJES </h2>
-			
-		  
-           <a href="./<?php echo $agregar_viaje ?>">ASIGNAR UN VIAJE</a>
-		   <br>
-		   <a href="./<?php echo $modificar_viaje ?>">MODIFICAR UN VIAJE</a>
-		   <br>
-		   <a href="./<?php echo $eliminar_viaje ?>">ELIMINAR REGISTRO DE VIAJE</a>
-		   <br>
+		
+		   
+		      	<div id='divHeader_supervisor'>
+			<h1>VIAJES</h1>
+		</div>
+
+			<nav id='divNav_supervisor'>
+		
+				<ul>
+       			    <li> <a  href="./<?php echo $agregar_viaje ?>">ASIGNAR UN VIAJE</a></li>
+            		<li><a href="./<?php echo $modificar_viaje ?>">MODIFICAR UN VIAJE</a></li>
+					<li><a href="./<?php echo $eliminar_viaje ?>">ELIMINAR REGISTRO DE VIAJE</a></li>
+					<li> <a href="./<?php echo $supervisor_home?>">ATRAS</a></li>
+				</ul>
+			</nav>
+
+		<div id="divContenedor">
+
+
+		</div>
 		   
 	</body>
 
