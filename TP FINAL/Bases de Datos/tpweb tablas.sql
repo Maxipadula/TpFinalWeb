@@ -214,3 +214,12 @@ create table if not exists reparacion
 	ON DELETE CASCADE
 	ON UPDATE CASCADE
 );
+
+create table if not exists alarmas
+	(id_alarmas int primary key,
+     id_repuesto int,
+     constraint id_repuesto_fk foreign key (id_repuesto) references repuesto (id_repuesto)
+     ON DELETE CASCADE
+	 ON UPDATE CASCADE,    
+	 kilometros double
+     );
