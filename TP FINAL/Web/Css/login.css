@@ -51,7 +51,7 @@ li a{
  
   #divHeader_supervisor{
 	height: 100px;
-	background-color: #0DDC22;
+	background-color: #4CAF50;
 	text-align: center;
 	padding-top: 25px;
 	color: #FFFFFF;
@@ -59,7 +59,7 @@ li a{
 
  #divNav_supervisor{
 	text-align: left;
-	background-color: #09B71B;
+	background-color: #388E3C;
 	color:#FFFFFF;
   margin:0 auto;
   overflow: hidden;
@@ -67,7 +67,7 @@ li a{
  
  #divHeader_chofer{
 	height: 100px;
-	background-color: #FF9C06;
+	background-color: #FF9800;
 	text-align: center;
 	padding-top: 25px;
 	color: #FFFFFF;
@@ -75,7 +75,7 @@ li a{
 
  #divNav_chofer{
 	text-align: left;
-	background-color: #E78B00;
+	background-color: #F57C00;
 	color:#FFFFFF;
   margin:0 auto;
   overflow: hidden;
@@ -145,7 +145,8 @@ input[readonly] {
 color: #9E9E9E; 
 }
 
-input[type="text"] {
+input[type="text"],
+input[type="password"] {
   padding: 5px;
   border: none;
   border-bottom: solid 2px #c9c9c9;
@@ -154,6 +155,8 @@ input[type="text"] {
   text-align: center;
 }
 input[type="text"]:focus,
-input[type="text"].focus {
+input[type="text"].focus,
+input[type="password"]:focus,
+input[type="password"].focus {
   border-bottom: solid 2px #969696;
 }

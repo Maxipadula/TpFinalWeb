@@ -8,6 +8,7 @@
 <?php include ("../rutas.php"); ?>
 <div id='divHeader_chofer'>
 			<h1> Sistema de Gestión Logistica</h1>
+			<div id="bienvenido"> Bienvenido, <?php echo $_SESSION["nombre"]; ?></div>
 		</div>
 	<nav id='divNav_chofer' >
 		

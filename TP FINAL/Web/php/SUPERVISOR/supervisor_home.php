@@ -33,13 +33,14 @@
 	<body>
 		<div id='divHeader_supervisor'>
 			<h1> Sistema de Gestión Logistica</h1>
+			<div id="bienvenido"> Bienvenido, <?php echo $_SESSION["nombre"]; ?></div>
 		</div>
 
 			<nav id='divNav_supervisor'>
 		
 				<ul>
-       			    <li><a href="./<?php echo $registrar_datos_sup ?>"> REGISTROS &nbsp;&nbsp;</a></li>
-            		<li><a href="./<?php echo $login?>"> SALIR &nbsp;&nbsp;</a></li>
+       			    <li><a href="./<?php echo $registrar_datos_sup ?>"> REGISTROS</a></li>
+            		<li><a href="../<?php echo $login?>"> SALIR</a></li>
 				</ul>
 			</nav>
 

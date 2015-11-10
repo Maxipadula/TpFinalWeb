@@ -20,8 +20,6 @@
 	        if ( isset ($_SESSION["nombre"])){
 		
 	          $nombre = $_SESSION["nombre"];
-	   
-	          echo "HOLA CHOFER ".$nombre."";
 	        }
 	        else{
 		     session_destroy();
