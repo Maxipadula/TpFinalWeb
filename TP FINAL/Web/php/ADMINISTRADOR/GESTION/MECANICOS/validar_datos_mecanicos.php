@@ -6,7 +6,7 @@
  	$nombree =$_POST ["nombre"];
 	$int_ext =$_POST ["internoexterno"];
 	
-
+	include ("mecanicos_datos.php");
  	 
 	 
 include ('../../../rutas.php');
@@ -46,9 +46,9 @@ include ('../../../rutas.php');
  	//echo $id_mar; PARA VER QUE TRAEN 
        */
  											 
-	echo "<p>Los datos han sido guardados con exito.</p>    
+	echo "<p>Los datos han sido guardados con exito.</p>   " 
   
- 		<p><a href='javascript:history.go(-1)'>VOLVER ATRÁS</a></p>"; 
+ 	
  							 
   
  	?> 

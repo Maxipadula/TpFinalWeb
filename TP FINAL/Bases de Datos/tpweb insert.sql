@@ -135,7 +135,7 @@ values (1, 'Hyundai'),
        (4, 'Renault');
        
 /*select *
-from marca;*/
+from vehiculo;*/
        
 insert into vehiculo (id_vehiculo, id_modelo, id_marca,capacidad_carga)
 values  (123, 100, 1,5225.00),
@@ -155,21 +155,21 @@ values	(1111, 'b', 123, 236589, 147852, 2005,'fkn 106',1000000),
         (7777, 'mb',147, 134679, 976431, 2013,'oki 435',250000),
         (8888, 'r',789, 1357913, 791357, 2014,'dma 124',150000);
         
-/*SELECT MA.descripcion marca,MO.descripcion modelo, T.patente
-											  FROM transporte T join
-												   vehiculo V  on T.id_vehiculo = V.id_vehiculo join
-												   modelo MO on V.id_modelo = MO.id_modelo join
-												   marca MA on MA.id_marca = MA.id_marca*/
+
  
-/*SELECT T.id_transporte, E.descripcion Estado, M.descripcion Marca, MO.descripcion Modelo, num_chasis NroChasis, num_motor, año_fabricacion, patente
+/*SELECT T.id_transporte, M.descripcion Marca, MO.descripcion Modelo, num_chasis NroChasis, num_motor, anio_fabricacion, patente
 										  FROM transporte T inner join 
-											   estado E on T.id_estado = E.id_estado inner join 
+											   
 											   vehiculo V on T.id_vehiculo = V.id_vehiculo inner join 
 											   marca M on V.id_marca = M.id_marca inner join 
 											   modelo MO on V.id_modelo = MO.id_modelo;*/      
         
-/*select *
-from usuario;*/
+/*SELECT M.descripcion marca,MO.descripcion modelo, T.patente patente,T.id_transporte ID
+											  FROM transporte T inner join 
+											   
+											   vehiculo V on T.id_vehiculo = V.id_vehiculo inner join 
+											   marca M on V.id_marca = M.id_marca inner join 
+											   modelo MO on V.id_modelo = MO.id_modelo*/
 
 insert into acoplado (id_acoplado, descripcion)
 values	(0, 'sin acoplado'),
@@ -253,6 +253,18 @@ values	(001, 'Yanet Rodriguez'),
 		(004, 'Silvia Escobar'),
 		(005, 'Ivan Lomba'),
 		(006, 'Lucrecio Lunch');
+        
+     
+        
+insert into mecanico_interno (id_mecanico)
+values (001),
+	   (004),
+	   (006);
+
+insert into mecanico_externo (id_mecanico, empresa)
+values (002, 'Jorge Motors'),
+	   (003, 'San Telmo Tunning'),
+	   (005, 'El taller de Juanca');
         
 /*select * 
 from mecanico;     */
