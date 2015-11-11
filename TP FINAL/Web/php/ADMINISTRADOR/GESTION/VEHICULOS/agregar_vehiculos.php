@@ -1,5 +1,11 @@
  <html>
 <head>
+	<title>Agregar Vehiculo | S.G.L</title>
+		
+		<script type="text/javascript" src="../../../../js/funciones/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="../../../../js/funciones/validarAgregarVehiculos.js"></script>
+		
+		<LINK REL="Stylesheet" HREF="../Css/login.css" TYPE="text/css">
 </head>	
 <body>
 	<?php include("vehiculos_datos.php"); ?>
@@ -42,24 +48,27 @@
 				
  				<div><label>MODELO</label>
  				</br>
-				<input type="text" name="modelo">
+				<input type="text" name="modelo" id="modelo" placeholder="Ingrese Modelo">
+				<div id="mensaje1" class="errores"> Ingresa solo letras</div>
  				</div>
 				<br>
 				
 				<div><label>MARCA</label>
  				</br>
-				<input type="text" name="marca">
+				<input type="text" name="marca" id="marca" placeholder="Ingrese Marca">
+				<div id="mensaje2" class="errores"> Ingresa solo letras</div>
  				</div>
 				<br>
 				
 				<div><label>CAPACIDAD DE CARGA</label>
 					</br>
- 					<input type="text" name="capacidad_carga">
+ 					<input type="text" name="capacidad_carga" id="carga" placeholder="Ingrese Capacidad de Carga">
+ 					<div id="mensaje3" class="errores"> Ingresa solo numeros</div>
  				</div>
 				<br>
 				
  				<input type="submit" value="Agregar" id="boton" class="boton">
- 				<input type="submit" value="Atras" onclick = "location='<?php echo $vehiculos_datos ?>'" class="boton"/>
+ 				<input type="reset" value="Vaciar" class="boton"/>
 				<br>
  		</div>
  	</form>

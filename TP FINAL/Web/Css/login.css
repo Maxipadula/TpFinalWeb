@@ -1,198 +1,195 @@
-@import url(https://fonts.googleapis.com/css?family=Ubuntu:300);
+@import  "https://fonts.googleapis.com/css?family=Ubuntu:300";
 
-html{
-  margin:0;
-  padding:0;
+html {
+    margin: 0;
+    padding: 0;
 }
-body {
-	background-color: #FFFFFF;
-  margin: 0;
-	font-family: 'Ubuntu', sans-serif;
-  padding: 0;
-	}
 
-ul{
-  float: left;
-  list-style-type: none;
-  padding: 0;
-	margin: 0;
-  position: relative;
-  left:50%;
-}	
+body {
+    background-color: #FFF;
+    margin: 0;
+    font-family: 'Ubuntu',sans-serif;
+    padding: 0;
+}
+
+ul {
+    float: left;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    left: 50%;
+}
 
 ul li {
-  float: left;
-  position: relative;
-  right: 50%;
-}
-li a{
-  padding: 30px;
+    float: left;
+    position: relative;
+    right: 50%;
 }
 
-#login{
-	text-align: center;
+li a {
+    padding: 30px;
 }
 
-#divHeader{
-	height: 100px;
-	background-color: #00BCD4;
-	text-align: center;
-	padding-top: 25px;
-	color: #FFFFFF;
+#login {
+    text-align: center;
 }
 
-#divNav{
-	text-align: left;
-	background-color: #0097A7;
-	color:#FFFFFF;
-  margin:0 auto;
-  overflow: hidden;
- }
- 
-  #divHeader_supervisor{
-	height: 100px;
-	background-color: #4CAF50;
-	text-align: center;
-	padding-top: 25px;
-	color: #FFFFFF;
+#divHeader {
+    height: 100px;
+    background-color: #00BCD4;
+    text-align: center;
+    padding-top: 25px;
+    color: #FFF;
 }
 
- #divNav_supervisor{
-	text-align: left;
-	background-color: #388E3C;
-	color:#FFFFFF;
-  margin:0 auto;
-  overflow: hidden;
- }
- 
- #divHeader_chofer{
-	height: 100px;
-	background-color: #FF9800;
-	text-align: center;
-	padding-top: 25px;
-	color: #FFFFFF;
+#divNav {
+    text-align: left;
+    background-color: #0097A7;
+    color: #FFF;
+    margin: 0 auto;
+    overflow: hidden;
 }
 
- #divNav_chofer{
-	text-align: left;
-	background-color: #F57C00;
-	color:#FFFFFF;
-  margin:0 auto;
-  overflow: hidden;
- }
-
-#divContenedor{
-	margin-left: 200px;
-	margin-right: 200px;
-  text-align: center;
+#divHeaderLogin {
+    height: 100px;
+    background-color: #607D8B;
+    text-align: center;
+    padding-top: 45px;
+    color: #FFF;
 }
 
+#divHeader_supervisor {
+    height: 100px;
+    background-color: #4CAF50;
+    text-align: center;
+    padding-top: 25px;
+    color: #FFF;
+}
+
+#divNav_supervisor {
+    text-align: left;
+    background-color: #388E3C;
+    color: #FFF;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#divHeader_chofer {
+    height: 100px;
+    background-color: #FF9800;
+    text-align: center;
+    padding-top: 25px;
+    color: #FFF;
+}
+
+#divNav_chofer {
+    text-align: left;
+    background-color: #F57C00;
+    color: #FFF;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#divContenedor {
+    margin-left: 200px;
+    margin-right: 200px;
+    text-align: center;
+}
 
 /* Color Hipervinculos*/
-a{
-	color:#FFFFFF;
+a {
+    color: #FFF;
 }
-a:link
-{
-   text-decoration: none;
+
+a:link {
+    text-decoration: none;
 }
-.tabla{
-	color: blue;
+
+a:visited {
+    text-decoration: none;
 }
-a:visited
-{
-   text-decoration: none;
-}
-a:hover
-{
-   text-decoration: underline;
+
+a:hover {
+    text-decoration: underline;
 }
 
 /*   Boton    */
+.boton {
+    color: #fff;
+    background: #455A64;
+    border: 0;
+    width: 100px;
+    height: 30px;
+    font-family: 'Ubuntu',sans-serif;
+}
 
-.boton{
-        color:white;
-        background:#0097A7;
-        border:0px;
-        width:100px;
-        height:30px;
-        font-family: 'Ubuntu', sans-serif;
-       }
-
-	   
-	   
 /*TABLAS*/
-table, table td, table tr {
-	padding:0px;
-	margin:0px;
-	border-spacing: 0px;
-}
-table {
-border:1px black solid;
-border-radius:5px;
-min-width:400px;
-font-family: Helvetica,Arial;
-}
- 
-table td {
-padding:6px;
-}
- 
-table tr:first-child td:first-child {
-border-radius:5px 0px 0px 0px;
-}
- 
-table tr:first-child td:last-child {
-border-radius:0px 5px 0px 0px;
-}
- 
-table tr:last-child td:first-child {
-border-radius:0px 0px 0px 5px;
-}
- 
-table tr:last-child td:last-child {
-border-radius:0px 0px 5px 0px;
-}
- 
-table td:not(:last-child) {
-border-right:1px #666 solid;
-}
- 
-table tr:nth-child(2n) {
-background: #87CEEB;
-}
- 
-table tr:nth-child(2n+1){
-background: #ADD8E6;
-}
- 
-table.header tr:not(:first-child):hover, table:not(.header) tr:hover {
-background:#E0FFFF;
-}
- 
-table:not(.header) tr {
-text-align: left;
-}
- 
-table.header tr:first-child {
-font-weight: bold;
-color:#fff;
-background-color: #444;
-border-bottom:1px #000 solid;
-}
- 
-table.header tr:nth-child(n+2) {
-text-align: right;
+.divTabla {
+    padding: 1em 3em;
+    margin: 1em 25%;
+    border-spacing: 0;
 }
 
+.divTabla table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border-color: #fff;
+    width: 100%;
+    height: auto;
+    border: 0;
+    padding: 0;
+}
 
+.divTabla td {
+    vertical-align: middle;
+    background-color: #fff;
+    border: 0;
+    height: 30px;
+    text-align: center;
+    padding: 0;
+    color: #000;
+    padding: 0;
+}
 
+.divTabla tr:first-child td {
+    background-color: #607D8B;
+    text-align: center;
+    color: #fff;
+    padding: 0;
+}
+
+table tr td.tBotonELim {
+    vertical-align: middle;
+    text-align: center;
+    width: 20%;
+    background-color: #F44336;
+}
+
+table tr td.tBotonELim:hover {
+    vertical-align: middle;
+    text-align: center;
+    width: 20%;
+    background-color: #D32F2F;
+    text-decoration: none;
+}
+
+.tLink {
+    color: #FFF;
+}
+
+.tLink:link {
+    text-decoration: none;
+}
+
+.tLink:visited {
+    text-decoration: none;
+}
 
 /* ERRORES JS*/
-
-.errores{
+.errores {
     text-align: center;
-    width:200px;
+    width: 200px;
     height: 20px;
     color: #F44336;
     display: none;
@@ -200,35 +197,24 @@ text-align: right;
     font-size: 12px;
 }
 
-#bienvenido{
-  float:right;
-  margin-right: 10px;
-}
-
-#divHeaderLogin{
-  height: 100px;
-  background-color: #009688;
-  text-align: center;
-  padding-top: 45px;
-  color: #FFFFFF;
+#bienvenido {
+    float: right;
+    margin-right: 10px;
 }
 
 input[readonly] {
-color: #9E9E9E; 
+    color: #9E9E9E;
 }
 
-input[type="text"],
-input[type="password"] {
-  padding: 5px;
-  border: none;
-  border-bottom: solid 2px #c9c9c9;
-  transition: border 0.3s;
-  font-family: 'Ubuntu', sans-serif;
-  text-align: center;
+input[type="text"],input[type="password"] {
+    padding: 5px;
+    border: none;
+    border-bottom: solid 2px #c9c9c9;
+    transition: border .3s;
+    font-family: 'Ubuntu',sans-serif;
+    text-align: center;
 }
-input[type="text"]:focus,
-input[type="text"].focus,
-input[type="password"]:focus,
-input[type="password"].focus {
-  border-bottom: solid 2px #969696;
+
+input[type="text"]:focus,input[type="text"].focus,input[type="password"]:focus,input[type="password"].focus {
+    border-bottom: solid 2px #969696;
 }
