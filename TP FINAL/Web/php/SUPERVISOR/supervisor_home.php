@@ -32,6 +32,7 @@
 	
 	<body>
 		<div id='divHeader_supervisor'>
+		<div id="delog"> <a href ="../<?php echo $deslog?>">DESLOGUEAR</a></div>
 			<h1> Sistema de Gestión Logistica</h1>
 			<div id="bienvenido"> Bienvenido, <?php echo $_SESSION["nombre"]; ?></div>
 		</div>
