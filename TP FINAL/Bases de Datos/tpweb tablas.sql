@@ -1,7 +1,7 @@
 create database if not exists tpFinal;
 
-/*drop schema tpFinal;*/
-
+/*drop schema tpFinal;
+*/
 use tpFinal;
 
  /* USUARIOS*/
@@ -223,3 +223,18 @@ create table if not exists alarmas
 	 ON UPDATE CASCADE,    
 	 kilometros double
      );
+   
+create table if not exists alar_transp
+	(
+     id_transporte int,
+     id_alarmas int,  
+	 contador int,
+	 constraint id_pk primary key (id_transporte, id_alarmas),
+     constraint id_transpo_fk foreign key (id_transporte) references transporte (id_transporte)
+     ON DELETE CASCADE
+	 ON UPDATE CASCADE,
+	 constraint id_ala_fk foreign key (id_alarmas) references alarmas (id_alarmas)
+     ON DELETE CASCADE
+	 ON UPDATE CASCADE
+     );  
+
