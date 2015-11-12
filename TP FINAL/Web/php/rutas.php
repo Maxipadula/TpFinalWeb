@@ -9,6 +9,7 @@
 	/*VARIABLES RUTAS*/
 	$login = "login.php";
 	$validar = "validar.php";
+	$deslog = "desloguear.php";
 	
 	
 	
@@ -100,6 +101,8 @@
 			   $eliminar_mecanico ="eliminar_mecanicos.php";
 			   $validar_datos_mecanicos ="validar_datos_mecanicos.php";
 			   $validar_eliminacion_mecanico ="validar_eliminacion_mecanico.php";
+			   $validar_modificacion_mecanico = "validar_modificacion_mecanico.php";
+			   
 			   
 			   
 			   //graficos

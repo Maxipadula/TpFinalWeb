@@ -26,7 +26,7 @@
             
            <li><a href="./<?php echo $agregar_mecanico?>">AGREGAR</a></li>
 	
-		   <li><a href="./<?php echo $modificar_mecanico?>">MODIFICAR</a></li>
+		   <!--<li><a href="./<?php echo $modificar_mecanico?>">INTERIORIZAR / EXTERIORIZAR</a></li>-->
 
 		  <li><a href="./<?php echo $eliminar_mecanico?>">ELIMINAR</a></li>
 		   

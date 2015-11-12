@@ -201,6 +201,11 @@ table tr td.tBotonELim:hover {
     float: right;
     margin-right: 10px;
 }
+#delog{
+    float: right;
+    margin-right: 10px;
+	margin-top:0px;
+}
 
 input[readonly] {
     color: #9E9E9E;
