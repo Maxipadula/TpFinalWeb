@@ -1,6 +1,7 @@
 <html> 
+ <?php include ("usuarios_datos.php"); ?>
  	<?PHP 
- 	session_start() ; 
+
  	 
  	$id_us =$_POST ["id_usuario"]; 
  	$usua =$_POST ["usuario"]; 
@@ -37,8 +38,7 @@
  	$cod_rol = $fila1["ID"]; 
  		 					   
       
- 	//echo $cod_rol; PARA VER QUE TRAEN	 
-       echo $id_lic;
+
   
  	$insert_usuario = mysql_query("insert into usuario (id_usuario, usuario, nombre, pass, fecha_nacimiento, id_tipo_doc, num_doc, id_licencia, codigo_rol) 
  									values ('".$id_us."','".$usua."','".$nombree."','".$passw."', '".$fecha_na."', '".$id_tipo_d."', '".$numero_doc."', '".$id_lic."', '".$cod_rol."')  
@@ -46,7 +46,7 @@
  											 
 
  							 
-	header ("location:".$usuarios_datos."");
+	echo "CARGA COMPLETA"
  	?> 
 	
  	 

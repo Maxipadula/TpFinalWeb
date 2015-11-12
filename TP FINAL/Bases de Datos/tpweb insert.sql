@@ -146,16 +146,17 @@ values  (123, 100, 1,5225.00),
 
 
 insert into transporte (id_transporte, id_estado, id_vehiculo, num_chasis, num_motor, anio_fabricacion,patente,km_recorridos)
-values	(1111, 'b', 123, 236589, 147852, 2005,'fkn 106',1000000),
+values	(1111, 'b', 123, 236589, 147852, 2005,'fkn 106',100000),
         (2222, 'mb', 123, 963258, 852147, 2013,'fmj 750',20000),
         (3333, 'mb', 123, 789456, 321987, 2014,'hgp 650',5000),
         (4444, 'r', 456, 159753, 258456, 2007,'dlo 890',800),
         (5555, 'b', 456, 951357, 448866, 2011,'dgf 789',600),
 		(6666, 'm', 789, 358692, 69852, 2015,'fen 404',9500),
-        (7777, 'mb',147, 134679, 976431, 2013,'oki 435',250000),
-        (8888, 'r',789, 1357913, 791357, 2014,'dma 124',150000);
+        (7777, 'mb',147, 134679, 976431, 2013,'oki 435',25000),
+        (8888, 'r',789, 1357913, 791357, 2014,'dma 124',15000);
         
-
+select *
+from transporte;
  
 /*SELECT T.id_transporte, M.descripcion Marca, MO.descripcion Modelo, num_chasis NroChasis, num_motor, anio_fabricacion, patente
 										  FROM transporte T inner join 
@@ -222,15 +223,18 @@ values(1,'motor',15000),
 /*select * 
 from repuesto;*/      
 
-/*insert into alarmas (id_alarmas, id_repuesto, kilometros)
-values(990,1,200000), 
-	  (991,2,100000), 
-	  (992,3,15000), 
-	  (993,4,20000), 
-      (994,5,10000), 
-      (995,6,30000), 
-      (996,7,9000), 
-      (997,8,6300); */
+insert into alarmas (id_alarmas, id_repuesto, kilometros)
+values(990,1,10000), 
+	  (991,2,20000), 
+	  (992,3,30000), 
+	  (993,4,40000), 
+      (994,5,50000), 
+      (995,6,60000), 
+      (996,7,70000), 
+      (997,8,80000); 
+      
+select * 
+from alarmas; 
       
 insert into orden (id_orden,id_repuesto,cantidad)
 values	(1,1,1),
@@ -282,5 +286,85 @@ values	(123, 006, 5555,1, 15000, '2015-08-06'),
 
         
 /*select * 
-from reparacion;*/        
-        
+from reparacion;*/
+
+insert into alar_transp (id_transporte, id_alarmas, contador)
+values	(1111, 990, 10),
+        (1111, 991, 5),
+		(1111, 992, 3),
+		(1111, 993, 2),
+		(1111, 994, 2),
+        (1111, 995, 1),
+		(1111, 996, 1),
+        (1111, 997, 1),
+ 	    (2222, 990, 2),
+        (2222, 991, 1),
+		(2222, 992, 0),
+		(2222, 993, 0),
+		(2222, 994, 0),
+        (2222, 995, 0),
+		(2222, 996, 0),
+        (2222, 997, 0),
+        (3333, 990, 0),
+        (3333, 991, 0),
+		(3333, 992, 0),
+		(3333, 993, 0),
+		(3333, 994, 0),
+        (3333, 995, 0),
+		(3333, 996, 0),
+        (3333, 997, 0),
+ 	    (4444, 990, 0),
+        (4444, 991, 0),
+		(4444, 992, 0),
+		(4444, 993, 0),
+		(4444, 994, 0),
+        (4444, 995, 0),
+		(4444, 996, 0),
+        (4444, 997, 0),
+		(5555, 990, 0),
+        (5555, 991, 0),
+		(5555, 992, 0),
+		(5555, 993, 0),
+		(5555, 994, 0),
+        (5555, 995, 0),
+		(5555, 996, 0),
+        (5555, 997, 0),
+ 	    (6666, 990, 0),
+        (6666, 991, 0),
+		(6666, 992, 0),
+		(6666, 993, 0),
+		(6666, 994, 0),
+        (6666, 995, 0),
+		(6666, 996, 0),
+        (6666, 997, 0),
+		(7777, 990, 2),
+        (7777, 991, 1),
+		(7777, 992, 0),
+		(7777, 993, 0),
+		(7777, 994, 0),
+        (7777, 995, 0),
+		(7777, 996, 0),
+        (7777, 997, 0),
+ 	    (8888, 990, 1),
+        (8888, 991, 0),
+		(8888, 992, 0),
+		(8888, 993, 0),
+		(8888, 994, 0),
+        (8888, 995, 0),
+		(8888, 996, 0),
+        (8888, 997, 0);
+     
+select * 
+from alar_transp; 
+
+
+
+select A.id_transporte, A.id_alarmas, AL.kilometros, A.contador
+											 from alar_transp A inner join
+												  alarmas AL on A.id_alarmas = AL.id_alarmas;
+                                                  
+select T.id_transporte transp, T.km_recorridos km, AT.contador cont
+																	  from transporte T inner join
+																	  alar_transp AT on T.id_transporte = AT.id_transporte
+																	  inner join alarmas A on A.id_alarmas = AT.id_alarmas;
+
