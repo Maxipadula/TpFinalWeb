@@ -1,8 +1,11 @@
 <html>
+<head>
+	<title>Eliminar Transporte | S.G.L</title>
+</head>
 <body>
 	<?php include("transportes_datos.php"); ?>
-	SELECCIONAR TRANSPORTE QUE QUIERAS ELIMINAR
-	<br>
+	<div id="divContenedor"> 
+	<div class="divTabla">
 	<?php
 		
 			include ('../../../rutas.php');
@@ -22,15 +25,17 @@
 			echo "<table border = '1'> \n";
 			echo "<tr><td>MARCA</td><td>MODELO</td><td>PATENTE</td><td>ESTADO</td><td>KM RECORRIDOS</td><td>NUMERO DE CHASIS</td><td>NUMERO DE MOTOR</td></tr>\n";
 			do{
-				echo "<tr><td>".$row["marca"]."</td><td>".$row["modelo"]."</td><td>".$row["patente"]."</td><td>".$row["estado"]."</td><td>".$row["km"].".KM</td><td>".$row["chasis"]."</td><td>".$row["motor"]."</td><td><a href='".$validar_eliminar_transporte ."?ID=".$row["ID"]."' class = 'tabla'>Eliminar</a></td></tr> \n";     
+				echo "<tr><td>".$row["marca"]."</td><td>".$row["modelo"]."</td><td>".$row["patente"]."</td><td>".$row["estado"]."</td><td>".$row["km"].".KM</td><td>".$row["chasis"]."</td><td>".$row["motor"]."</td><td class='tBotonElim'><a href='".$validar_eliminar_transporte ."?ID=".$row["ID"]."' class = 'tLink'>Eliminar</a></td></tr> \n";     
 			} while ($row = mysql_fetch_array($consulta_transporte));
 			echo "</table> \n";
 			
 			
 		} else {
-			echo "no se encontraron ningun registro";
+			echo "<h3> No se encontraron registros </h3>";
 		} 
 
 ?>
+</div>
+</div>
 </body>
 </html>

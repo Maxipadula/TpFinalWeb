@@ -1,5 +1,6 @@
 <html>
 	<?php include("transportes_datos.php"); ?>
+	<div id="divContenedor">
 	<?PHP
 	
 	if(!isset($_SESSION))
@@ -15,7 +16,10 @@
 	
 	mysql_query("DELETE FROM transporte WHERE id_transporte = '".$id_trans_elim."'")
     or die(mysql_error()); 
-	echo("ELIMINACION EXITOSA");
+
+    //Mensaje y boton para continuar//
+	echo("<h3>ELIMINACION EXITOSA</h3>");
 	?>
-	
+	<button onclick="location.href='./<?php echo $eliminar_transportes  ?>'" class="boton">Continuar</button>
+	</div> 
 </html>

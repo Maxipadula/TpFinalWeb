@@ -1,151 +1,177 @@
-﻿ <html>
- <head>
-	<meta charset="UTF-8">
-</head>
-<body>
-<?php include ("transportes_datos.php"); ?>
-	<?php		
-			
-    if(!isset($_SESSION)) 
-    { 
-        session_start(); 
-    } 
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+	<title>Agregar Transporte | S.G.L</title>
+		
+		<script type="text/javascript" src="../../../../js/funciones/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="../../../../js/funciones/validarAgregarTransporte.js"></script>
+    </head>
+    <body>
+        <?php include ("transportes_datos.php"); ?><?php       
+                            
+                    if(!isset($_SESSION)) 
+                    { 
+                        session_start(); 
+                    } 
 
-			include ('../../../rutas.php');
-	
-	$conexion = mysql_connect($puerto, $usuario,$password) or die("no conecta");
-	mysql_select_db ("tpFinal",$conexion) or die ("no db");
-			
-			$consulta_id= mysql_query(" SELECT MAX( id_transporte ) ID
-                                        FROM transporte ") or die ("no query");
-                             
-			
-			$fila1 = mysql_fetch_assoc($consulta_id);
-			
-			$id_transporte= $fila1["ID"];
-			
-			$id_transporte +=1111;
-			
-			
-			
-	?>
- 	 AGREGAR TRANSPORTES:
- 	 <form class='contacto' method="post" name="transporte" action="">
- 		<div id="contacto">
- 				</br>
- 				<div><label>ID
-					</br>
-					<input type="text" name="id_tr"  value="<?php echo $id_transporte?>"readonly = "readonly">
- 				</label>
- 				</div>	
- 				</br>
-				
- 				<div><label>ESTADO DEL VEHICULO
- 					</br>
-					 <select name="estado_transporte"> 
-					 <option value="nada" selected="selected"></option>
-					 <option value="mm">Muy Malo</option>
-                     <option value="m">Malo</option>
-                     <option value="r">Regular</option>
-					 <option value="b">Bueno</option>
-					 <option value="mb">Muy Bueno</option>
-                     </select>
- 				</label>
- 				</div>
- 				</br>
-				
-				<div><label>MARCA
-				 <select name="marca_transporte"> 
-				 <option value="nada" selected="selected"></option>
-				<?php
-				
-				$consulta_marca = mysql_query ("SELECT *
-												FROM marca");
-				
-				
-												
-				 ?>  
-				 <?php
-				while ( $row = mysql_fetch_array($consulta_marca) )
-				{
-					
-				 ?>
-				  <option value=" <?php echo $row['descripcion'] ?> " >
-				  <?php echo $row['descripcion']; ?>
-				  </option>
-			    <?php
-				}
-				?>
-				</label>
-				</select>
- 				</div>
- 				</br>
-				
-						
-				<div><label>MODELO
-				 <select name="modelo_transporte"> 
-				 <option value="nada" selected="selected"></option>
-				<?php								
-				$consulta_modelo = mysql_query ("SELECT descripcion,id_modelo ID
-												FROM modelo");
-				
-				?>
-				<?php
-				while ( $row2 = mysql_fetch_array($consulta_modelo) )
-				{
-					
-				?>				
-				  <option value=" <?php echo $row2['descripcion'] ?> " >
-				  <?php echo $row2['descripcion']; ?>
-				  </option>
-			    <?php
-				}
-				?>
-				</label>
-				</select>
- 				</div>
- 				</br>
-				
-				
-				<div><label>NUMERO DE CHASIS
- 					</br>
- 					<input type="text" name="num_chasis">
- 				</label>
- 				</div>
- 				</br>
-				
-				<div><label>NUMERO DE MOTOR
- 					</br>
- 					<input type="text" name="num_motor">
- 				</label>
- 				</div>
- 				</br>
-				
-				<div><label>AÑO DE FABRICACION
- 					</br>
- 					<input type="text" name="fabricacion">
- 				</label>
- 				</div>
- 				</br>
-				
-				<div><label>PATENTE
- 					</br>
- 					<input type="text" name="patente">
- 				</label>
- 				</div>
- 				</br>
-				
-				<div><label>KM RECORRIDOS
- 					</br>
- 					<input type="text" name="patente">
- 				</label>
- 				</div>
- 				</br>
-							
-				<input type="submit" value="Seguir">
-				<input type="reset" value="Borrar Todo">
-				<input type='button' onclick='history.back()' name='volver atrás' value='Volver'></form>
- 		</div>
- 	</form>
-</body>
+                            include ('../../../rutas.php');
+                    
+                    $conexion = mysql_connect($puerto, $usuario,$password) or die("no conecta");
+                    mysql_select_db ("tpFinal",$conexion) or die ("no db");
+                            
+                            $consulta_id= mysql_query(" SELECT MAX( id_transporte ) ID
+                                                        FROM transporte ") or die ("no query");
+                                             
+                            
+                            $fila1 = mysql_fetch_assoc($consulta_id);
+                            
+                            $id_transporte= $fila1["ID"];
+                            
+                            $id_transporte +=1111;
+                            
+                            
+                            
+                    ?>
+        <div id="divContenedor">
+            
+            <p>AGREGAR TRANSPORTES:</p>
+
+            <form action="" class='contacto' id="transporte" method="post"
+            name="transporte">
+                <div id="contacto">
+                    <div>
+                        <label>ID</label>
+                    </br>
+                        <input name="id_tr" readonly="readonly" type="text" value="<?php echo $id_transporte?>">
+                    </div>
+                    </br>
+                    <div>
+                        <label>ESTADO DEL VEHICULO</label>
+                    </br>
+                        <select name="estado_transporte" id="estado">
+                            <option selected="selected" value="nada"> Seleccione Estado
+                                </option>
+                            <option value="mm">
+                                Muy Malo
+                            </option>
+                            <option value="m">
+                                Malo
+                            </option>
+                            <option value="r">
+                                Regular
+                            </option>
+                            <option value="b">
+                                Bueno
+                            </option>
+                            <option value="mb">
+                                Muy Bueno
+                            </option>
+                        </select>
+                    </div>
+                    <div id="mensaje1" class="errores"> Ingrese una opcion</div>
+                    <br>
+
+                    <div>
+                        <label>MARCA</label>
+                    </br>
+                        <select name="marca_transporte" id="marca">
+                        </br>
+                            <option selected="selected" value="nada">Seleccione Marca
+                                </option>
+                                <?php
+                                                                    
+                                                                    $consulta_marca = mysql_query ("SELECT *
+                                                                                                    FROM marca");
+                                                                    
+                                                                    
+                                                                                                    
+                                                                     ?><?php
+                                                                    while ( $row = mysql_fetch_array($consulta_marca) )
+                                                                    {
+                                                                        
+                                                                     ?>
+                            <option value=
+                            " &lt;?php echo $row['descripcion'] ?&gt; ">
+                                <?php echo $row['descripcion']; ?>
+                            <?php
+                                                                    }
+                                                                    ?>
+                                                                    </option>
+                        </select>
+                    </div>
+                    <div id="mensaje2" class="errores"> Ingrese una opcion</div>
+                    </br>
+                    <div>
+                        <label>MODELO</label>
+                        	</br>
+                         <select name="modelo_transporte" id="modelo">
+
+                            <option selected="selected" value="nada">Seleccione Modelo
+                                </option><?php                               
+                                                                    $consulta_modelo = mysql_query ("SELECT descripcion,id_modelo ID
+                                                                                                    FROM modelo");
+                                                                    
+                                                                    ?><?php
+                                                                    while ( $row2 = mysql_fetch_array($consulta_modelo) )
+                                                                    {
+                                                                        
+                                                                    ?>
+                            <option value=
+                            " &lt;?php echo $row2['descripcion'] ?&gt; ">
+                                <?php echo $row2['descripcion']; ?>
+                            <?php
+                                                                    }
+                                                                    ?>
+                         </option>
+                        </select>
+                    </div>
+                    <div id="mensaje3" class="errores"> Ingrese una opcion</div>
+                    </br>
+                    <div>
+                        <label>NUMERO DE CHASIS</label>
+                    	</br>
+                        <input name="num_chasis" type="text" id="chasis" placeholder="Numero Chasis" />
+                        <div id="mensaje4" class="errores">Ingrese solo numeros</div>
+                    </div>
+                    <br>
+
+                    <div>
+                        <label>NUMERO DE MOTOR</label>
+                    </br>
+                        <input name="num_motor" type="text" id="motor" placeholder="Numero Motor" />
+                        <div id="mensaje5" class="errores">Ingrese solo numeros</div>
+                    </div>
+                    <br>
+
+                    <div>
+                        <label>AÑO DE FABRICACION</label>
+                    </br>
+                        <input name="fabricacion" type="text" id="anio" placeholder="Año Fabricación">
+                        <div id="mensaje6" class="errores">Ingrese solo numeros</div>
+                    </div>
+                    <br>
+
+                    <div>
+                        <label>PATENTE</label>
+                        </br>
+                        <input name="patente" type="text" id="patente" placeholder="Patente Formato AAA000">
+                        <div id="mensaje7" class="errores">Ingrese patente válida[Formato AAA000]</div>
+                    </div>
+                    <br>
+
+                    <div>
+                        <label>KM RECORRIDOS</label>
+                    </br>
+                        <input name="patente" type="text" id="kmreco" placeholder="Km Recorridos">
+                        <div id="mensaje8" class="errores">Ingrese solo numeros</div>
+                    </div>
+                    </br>
+                    <input type="submit" value="Seguir" class="boton" id="boton">
+                    <input type="reset" value="Borrar Todo" class="boton">
+                    
+                </div>
+            </form>
+        </div>
+    </body>
 </html>

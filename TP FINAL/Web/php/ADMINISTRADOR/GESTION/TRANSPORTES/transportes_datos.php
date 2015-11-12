@@ -32,10 +32,7 @@
        </ul>
  
 	</nav>
-	<div id="divContenedor">
 
-
-		</div>
 </body>
 
 </html>
